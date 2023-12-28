@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import GameBoard from './components/gameBoard.jsx'
 import Player from './components/player.jsx'
+import Log from './components/Log.jsx'
 function App() {
   const [active, setActive] = useState('X')
   function handleSelectSquare () {
@@ -17,6 +18,7 @@ function App() {
         </ol>
 <GameBoard onSelectSquare={handleSelectSquare} activePlayerSymbol={active}/>
       </div>
+      <Log/>
     </main>
   )
 }
